@@ -9,11 +9,13 @@ export default Component.extend({
       this.set('isMobileMenuOpen', false);
       this.set('isSettingsOpen', true);
       this.set('isReportsOpen', false);
+      this.get('goSettings')();
     },
     goReports() {
       this.set('isMobileMenuOpen', false);
       this.set('isSettingsOpen', false);
       this.set('isReportsOpen', true);
+      this.get('goReports')();
     },
     openMobileMenu() {
       if (screen.width < 413) {
