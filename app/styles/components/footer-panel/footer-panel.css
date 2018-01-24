@@ -1,0 +1,131 @@
+.dark {
+  background-color: #000245;;
+}
+
+.dark .text-link, .dark .footer-link, .dark .footer-content-right {
+  color: #FFFFFF;
+}
+
+.footer-content .title {
+  font-family: kaleidossmooth;
+  font-size: 36pt;
+  color: #FF3636;
+  margin-top: 50px;
+}
+
+.footer-content .text-link {
+  font-size: 18pt;
+  font-family: merlo_neueregular;
+  margin-top: 25px;
+}
+
+.footer-content .text-link:hover {
+  color: #FF5050;
+}
+
+.assistance-container {
+  margin-top: 15px;
+  background-color: #E4E8EF;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 5%;
+  padding: 20px 0 20px 20px;
+}
+
+.assistance-content {
+  margin-left: 20px;
+}
+
+.assistance-title {
+  font-size: 30pt;
+  font-family: merlo_neuesemi_bold_italic;
+  color: #000245;
+}
+
+.assistance-paragraph {
+  margin-left: 50px;
+}
+
+.assitance-subtitle {
+  margin-top: 30px;
+  font-size: 20pt;
+  font-family: merlo_neuesemi_bold_italic;
+  color: #FF3636;
+}
+
+.assitance-subtitle .footer-circle-icon{
+  background-color: #FF3636;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 7px;
+}
+
+.assitance-subtitle .footer-circle-icon.email-icon{
+  padding: 7px 7px;
+  font-size: 20px;
+}
+
+.assistance-paragraph {
+  margin-top: 10px;
+  font-size: 12pt;
+  font-family: merlo_neueregular;
+  color: #000245;
+}
+
+.assistance-paragraph .highlighted {
+  color: #FF3636;
+  font-family: merlo_neuesemi_bold;
+}
+
+.footer-phone-circle {
+  font-size: 18pt;
+  margin-top: 8px;
+}
+
+.footer-circle {
+  font-size: 16pt;
+}
+
+.social-buttons-container{ 
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 60px 0;
+}
+
+.social_button {
+  font-family: 'FontAwesome';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  background-color: #000245;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  padding-top: 7px;
+}
+
+.dark .social_button  {
+  color: #000245;
+  background-color: white;
+}
+
+.social_button:hover {
+  background-color: #FF5050;
+}
+
+.footer-bottom-container {
+  margin: 50px 0;
+}
+
+.footer-bottom-left{
+  margin-bottom: 30px;
+}
+
+.footer-link {
+  font-family: merlo_neueregular;
+  font-size: 14pt;
+  display: inline;
+}
