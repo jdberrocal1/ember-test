@@ -1,0 +1,44 @@
+.settings-container {
+  margin-top: 50px;
+}
+
+.settings-container .title{
+  font-size: 36pt;
+  color: #000245;
+  font-family: merlo_neuesemi_bold_italic;
+}
+
+.company-box {
+  background-color: rgba(255, 54, 54, 1);
+  color: #FFFFFF;
+  padding: 10px;
+  margin: 0px 0px 115px 10px;
+  border-radius: 4px;
+}
+
+.logout-btn {
+  color: rgba(255, 54, 54, 1);
+  display: none;
+}
+
+.company-box .company-title {
+  font-family: merlo_neuesemi_bold_italic;
+  font-size: 26pt;
+}
+
+.company-box .info {
+  margin-top: 20px;
+  font-size: 12pt;
+  display: block;
+  font-family: merlo_neueregular;
+}
+
+.company-box .member {
+  font-family: merlo_neuemedium_italic;
+  font-size: 16pt;
+  margin-bottom: 15px;
+}
+
+.company-box .id {
+  font-family: merlo_neuesemi_bold_italic;
+}
