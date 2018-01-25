@@ -5,8 +5,29 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-push-6">
-      form
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-push-6 form-container">
+      <form>
+          {{#if isUpdatingName}}
+          <div class="form-group">
+            <label for="name" class="form-label">First Name</label>
+            {{input type="text" value=firstName class="form-input" id="firstName"}}
+            <div class="input-border"></div>
+            <span class="error-msg">{{errorMsgs.firstName}}</span>
+            <label for="name" class="form-label">Last Name</label>
+            {{input type="text" value=lastName class="form-input" id="lastName"}}
+            <div class="input-border"></div>
+            <span class="error-msg">{{errorMsgs.lastName}}</span>
+            <button class="edit-btn" {{action 'updateName'}}>Save</button>
+            <button type="button" class="cancel-btn" {{action 'cancelName'}}>Cancel</button>
+          </div>
+          {{else}}
+            <div class="form-group">
+              <label for="name" lass="form-label">Name</label>
+              <label class="form-value">{{fullName}}</label>
+              <button class="edit-btn" {{action 'showNameForm'}}>Edit</button>
+            </div>
+          {{/if}}
+      </form>
     </div>
     <div class="col-xs-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-pull-6">
       <div class="row company-box">
