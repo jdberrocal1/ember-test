@@ -1,68 +1,85 @@
 import Controller from '@ember/controller';
+import Validator from '../../utils/validators';
 
 export default Controller.extend({
   firstName: 'Daniel',
   lastName: 'Berrocal',
-  email: 'asd',
+  email: 'jdanielb1992@gmail.com',
   password: '',
-  valueBackup: null,
+  valueBackup: {},
   isUpdatingName: false,
-  errorMsgs: null,
+  isUpdatingEmail: false,
+  isUpdatingPassword: false,
+  errorMsgs: {},
   fullName: Ember.computed('firstName', 'lastName', function () {
     return `${this.get('firstName')} ${this.get('lastName')}`;
   }),
-  nameValidator(field, value) {
-    let regex = /^[a-zA-Z ]+$/;
-    let errorMsgs = this.get('errorMsgs');
-    let errorMsgsExists = false;
-
-    if(errorMsgs){
-      errorMsgsExists = true;
-    } else {
-      errorMsgs = {};
-    }
-
-    if (value.length === 0) {
-      let msg = 'Required value.';
-      errorMsgsExists ? this.set(`errorMsgs.${field}`, msg) : errorMsgs[field] = msg;
-      this.set('errorMsgs', errorMsgs);
-      return false;
-    }
-    if (value.length > 25) {
-      let msg = 'Please enter no more than 25 characters.';
-      errorMsgsExists ? this.set(`errorMsgs.${field}`, msg) : errorMsgs[field] = msg;
-      this.set('errorMsgs', errorMsgs);
-      return false;
-    }
-    if (!regex.test(value)) {
-      let msg = 'Invalid value.';
-      errorMsgsExists ? this.set(`errorMsgs.${field}`, msg) : errorMsgs[field] = msg;
-      this.set('errorMsgs', errorMsgs);
-      return false;
-    } else {
-      let msg = '';
-      errorMsgsExists ? this.set(`errorMsgs.${field}`, msg) : errorMsgs[field] = msg;
-      this.set('errorMsgs', errorMsgs);
-      return true;
-    }
-  },
   actions: {
     showNameForm() {
       this.set('isUpdatingName', true);
-      this.set('valueBackup', { firstName: this.get('firstName'), lastName: this.get('lastName') });
+      let valueBackup = this.get('valueBackup');
+      valueBackup.firstName = this.get('firstName');
+      valueBackup.lastName = this.get('lastName');
+      this.set('valueBackup', valueBackup);
     },
     updateName() {
       let firstName = this.get('firstName');
       let lastName = this.get('lastName');
-      if (this.nameValidator('firstName', firstName) && this.nameValidator('lastName', lastName)) {
+      let firstNameValidationResult = Validator.fieldValidator(false, firstName);
+      this.set('errorMsgs.firstName', firstNameValidationResult.msg);
+      let lastNameValidationResult = Validator.fieldValidator(false, lastName);
+      this.set('errorMsgs.lastName', lastNameValidationResult.msg);
+      if (firstNameValidationResult.result && lastNameValidationResult.result) {
         this.set('isUpdatingName', false);
       }
     },
     cancelName() {
-      let nameInfoBackup = this.get('valueBackup');
-      this.set('firstName', nameInfoBackup.firstName);
-      this.set('lastName', nameInfoBackup.lastName);
+      let valueBackup = this.get('valueBackup');
+      this.set('firstName', valueBackup.firstName);
+      this.set('lastName', valueBackup.lastName);
+      this.set('errorMsgs.firstName', '');
+      this.set('errorMsgs.lastName', '');
       this.set('isUpdatingName', false);
     },
+    showEmailForm() {
+      this.set('isUpdatingEmail', true);
+      let valueBackup = this.get('valueBackup');
+      valueBackup.email = this.get('email');
+      this.set('valueBackup', valueBackup);
+    },
+    updateEmail() {
+      let email = this.get('email');
+      let emailValidationResult = Validator.fieldValidator(true, email);
+      this.set('errorMsgs.email', emailValidationResult.msg);
+      if (emailValidationResult.result) {
+        this.set('isUpdatingEmail', false);
+      }
+    },
+    cancelEmail() {
+      let valueBackup = this.get('valueBackup');
+      this.set('email', valueBackup.email);
+      this.set('errorMsgs.email', '');
+      this.set('isUpdatingEmail', false);
+    },
+    // showPasswordForm() {
+    //   this.set('isUpdatingEmail', true);
+    //   let valueBackup = this.get('valueBackup');
+    //   valueBackup.email = this.get('email');
+    //   this.set('valueBackup', valueBackup);
+    // },
+    // updatePassword() {
+    //   let email = this.get('email');
+    //   let emailValidationResult = Validator.fieldValidator(true, email);
+    //   this.set('errorMsgs.email', emailValidationResult.msg);
+    //   if (emailValidationResult.result) {
+    //     this.set('isUpdatingEmail', false);
+    //   }
+    // },
+    // cancelPassword() {
+    //   let valueBackup = this.get('valueBackup');
+    //   this.set('password', valueBackup.password);
+    //   // clean error msgs from passwords
+    //   this.set('isUpdatingPassword', false);
+    // },
   }
 });

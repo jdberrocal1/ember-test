@@ -27,6 +27,38 @@
               <button class="edit-btn" {{action 'showNameForm'}}>Edit</button>
             </div>
           {{/if}}
+          {{#if isUpdatingEmail}}
+          <div class="form-group">
+            <label for="name" class="form-label">Email</label>
+            {{input type="email" value=email class="form-input" id="email"}}
+            <div class="input-border"></div>
+            <span class="error-msg">{{errorMsgs.email}}</span>
+            <button class="edit-btn" {{action 'updateEmail'}}>Save</button>
+            <button type="button" class="cancel-btn" {{action 'cancelEmail'}}>Cancel</button>
+          </div>
+          {{else}}
+            <div class="form-group">
+              <label for="name" lass="form-label">Email</label>
+              <label class="form-value">{{email}}</label>
+              <button class="edit-btn" {{action 'showEmailForm'}}>Edit</button>
+            </div>
+          {{/if}}
+          {{!-- {{#if isUpdatingPassword}}
+          <div class="form-group">
+            <label for="name" class="form-label">Email</label>
+            {{input type="email" value=email class="form-input" id="email"}}
+            <div class="input-border"></div>
+            <span class="error-msg">{{errorMsgs.email}}</span>
+            <button class="edit-btn" {{action 'updateEmail'}}>Save</button>
+            <button type="button" class="cancel-btn" {{action 'cancelEmail'}}>Cancel</button>
+          </div>
+          {{else}}
+            <div class="form-group">
+              <label for="name" lass="form-label">Email</label>
+              <label class="form-value">{{email}}</label>
+              <button class="edit-btn" {{action 'showEmailForm'}}>Edit</button>
+            </div>
+          {{/if}} --}}
       </form>
     </div>
     <div class="col-xs-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-pull-6">

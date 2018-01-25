@@ -59,6 +59,8 @@
   font-family: 'merlo_neuemedium_italic';
   font-size: 14px;
   color: #FF3636;
+  background-color: white;
+  border: 0;
 }
 
 .form-container .error-msg{
