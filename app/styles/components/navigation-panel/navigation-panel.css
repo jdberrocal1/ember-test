@@ -88,7 +88,7 @@
   color: #000245;
 }
 
-.mobile-menu-option.option-active {
+.mobile-menu-option.option-active, .menu-option.option-active{
   font-family: merlo_neuesemi_bold;
   color: #FF5050;
 }

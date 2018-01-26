@@ -18,7 +18,7 @@ export default Component.extend({
       this.get('goReports')();
     },
     openMobileMenu() {
-      if (screen.width < 413) {
+      if (screen.width < 750) {
         this.set('isMobileMenuOpen', true);
       }
     },

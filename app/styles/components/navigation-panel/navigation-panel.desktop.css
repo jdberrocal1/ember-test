@@ -1,0 +1,26 @@
+@media only screen and (min-width: 768px) {
+  .menu  > i.hamburger {
+    display: none;
+  }
+
+  .menu a {
+    text-decoration: none;
+  }
+
+  .menu > ul {
+    display: block;
+  }
+
+  .menu > ul > li, .menu > ul > li > a{
+    display: inline;
+    font-size: 18pt;
+    font-family: merlo_neuemedium;
+    color:#000245;
+    margin-left: 40px;
+  }
+
+  .menu > ul > li > a:hover, .menu > ul > li:hover  {
+    color: #FF5050;
+    background-color: #ffffff;
+  }
+}

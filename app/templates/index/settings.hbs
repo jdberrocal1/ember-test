@@ -1,11 +1,11 @@
-<div class="container-fluid settings-container">
+<div class="container settings-container">
   <div class="row">
-    <div class="col-xs-12 display-center">
+    <div class="col-xs-12 display-center title-container">
       <h1 class="title">Account Settings</h1>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-push-6 form-container">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0 col-md-push-6 form-container">
       <form>
           {{#if isUpdatingName}}
           <div class="form-group">
@@ -59,9 +59,9 @@
               <span class="error-msg">{{errorMsgs.newPassword}}</span>
             </div>
             <label class="form-label">Re-enter New Password</label>
-            {{input type="password" value=reNewPassword class="form-input" id="reNewPassword"}}
+            {{input type="password" value=confirmationPassword class="form-input" id="confirmationPassword"}}
             <div class="input-border">
-              <span class="error-msg">{{errorMsgs.reNewPassword}}</span>
+              <span class="error-msg">{{errorMsgs.confirmationPassword}}</span>
             </div>
             <button class="edit-btn" {{action 'updatePassword'}}>Save</button>
             <button type="button" class="cancel-btn" {{action 'cancelPassword'}}>Cancel</button>
@@ -75,17 +75,15 @@
           {{/if}}
       </form>
     </div>
-    <div class="col-xs-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-pull-6">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-6 col-md-pull-6 col-lg-offset-0 company-box-container">
       <div class="row company-box">
           <span class="company-title">The Honest Company, Inc.</span>
           <span class="info">12130 Millennium Dr, Los Angeles, CA 90094</span>
           <span class="info">(888) 862-8818</span>
           <span class="info member">Your Member ID is 
-            <br>
             <span class="id">791509951</span>
           </span>
           <button class="settings-btn logout-btn pull-right">log out of xyz</button>
-
       </div>
     </div>
   </div>

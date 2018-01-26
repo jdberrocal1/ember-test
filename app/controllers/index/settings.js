@@ -6,6 +6,9 @@ export default Controller.extend({
   lastName: 'Berrocal',
   email: 'jdanielb1992@gmail.com',
   password: 'testingPassword',
+  currentPassword: '',
+  newPassword: '',
+  confirmationPassword: '',
   valueBackup: {},
   isUpdatingName: false,
   isUpdatingEmail: false,
@@ -14,6 +17,14 @@ export default Controller.extend({
   fullName: Ember.computed('firstName', 'lastName', function () {
     return `${this.get('firstName')} ${this.get('lastName')}`;
   }),
+  cleanPasswordFields(){
+    this.set('currentPassword', '');
+    this.set('newPassword', '');
+    this.set('confirmationPassword', '');
+    this.set('errorMsgs.currentPassword', '');
+    this.set('errorMsgs.newPassword', '');
+    this.set('errorMsgs.confirmationPassword', '');
+  },
   actions: {
     showNameForm() {
       this.set('isUpdatingName', true);
@@ -67,18 +78,29 @@ export default Controller.extend({
       valueBackup.password = this.get('password');
       this.set('valueBackup', valueBackup);
     },
-    // updatePassword() {
-    //   let email = this.get('email');
-    //   let emailValidationResult = Validator.fieldValidator(true, email);
-    //   this.set('errorMsgs.email', emailValidationResult.msg);
-    //   if (emailValidationResult.result) {
-    //     this.set('isUpdatingEmail', false);
-    //   }
-    // },
+    updatePassword() {
+      let valueBackup = this.get('valueBackup');
+      let oldPass = this.get('currentPassword');
+      let newPass = this.get('newPassword');
+      let confirmationPassword = this.get('confirmationPassword');
+
+      let passwordValidatorResult = Validator.passwordValidator(true, oldPass, valueBackup.password);
+      this.set('errorMsgs.currentPassword', passwordValidatorResult.msg);
+      let newPasswordValidatorResult = Validator.passwordValidator(false, newPass, confirmationPassword);
+      this.set('errorMsgs.newPassword', newPasswordValidatorResult.msg);
+      let confirmationPasswordValidatorResult = Validator.passwordValidator(true, confirmationPassword, newPass);
+      this.set('errorMsgs.confirmationPassword', confirmationPasswordValidatorResult.msg);
+
+      if (passwordValidatorResult.result && newPasswordValidatorResult.result && confirmationPasswordValidatorResult.result) {
+        this.set('password', newPass);
+        this.cleanPasswordFields();
+        this.set('isUpdatingPassword', false);
+      }
+    },
     cancelPassword() {
       let valueBackup = this.get('valueBackup');
       this.set('password', valueBackup.password);
-      // clean error msgs from passwords
+      this.cleanPasswordFields();
       this.set('isUpdatingPassword', false);
     },
   }

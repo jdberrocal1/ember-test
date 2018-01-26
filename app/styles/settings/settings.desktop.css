@@ -1,0 +1,25 @@
+@media only screen and (min-width: 1200px) {
+  .settings-container .logout-btn {
+      display: block;
+  }
+
+  .settings-container .logout-btn:hover {
+    font-family: 'merlo_neuebold_italic';
+  }
+
+  .settings-container .company-box {
+    padding: 45px 40px;
+  }
+
+  .settings-container .company-box .id {
+    display: inline;
+  }
+
+  .settings-container .form-container {
+    padding-left: 55px;
+  }
+
+  .settings-container .company-box-container{
+    padding-right: 55px;
+  }
+}
