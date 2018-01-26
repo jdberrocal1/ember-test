@@ -2,12 +2,6 @@
   margin-top: 50px;
 }
 
-.settings-container .title{
-  font-size: 36pt;
-  color: #000245;
-  font-family: merlo_neuesemi_bold_italic;
-}
-
 .settings-container .logout-btn {
   width: 160px;
   height: 40px;

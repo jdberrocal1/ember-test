@@ -2,6 +2,12 @@ body{
   margin: 0;
 }
 
+.title{
+  font-size: 36pt;
+  color: #000245;
+  font-family: merlo_neuesemi_bold_italic;
+}
+
 .no-padding {
   padding: 0 !important;
 }

@@ -1,0 +1,32 @@
+.reports-container {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.reports-container .bg-main-light {
+  background-color: #E4E8EF;
+}
+
+.reports-container .powered-logo {
+  height: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.powered-area {
+  height: 80px;
+  margin-top: 30px;
+}
+
+.powered-text {
+  height: 30px;
+  font-size: 18pt;
+  font-family: merlo_neueitalic;
+  display: inline-block;
+  color: #000245;
+}
+
+.powered-highlighted {
+  font-family: merlo_neuebold_italic;
+}
