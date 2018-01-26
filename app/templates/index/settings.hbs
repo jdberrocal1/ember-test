@@ -11,12 +11,14 @@
           <div class="form-group">
             <label class="form-label">First Name</label>
             {{input type="text" value=firstName class="form-input" id="firstName"}}
-            <div class="input-border"></div>
-            <span class="error-msg">{{errorMsgs.firstName}}</span>
+            <div class="input-border">
+              <span class="error-msg">{{errorMsgs.firstName}}</span>
+            </div>
             <label class="form-label">Last Name</label>
             {{input type="text" value=lastName class="form-input" id="lastName"}}
-            <div class="input-border"></div>
-            <span class="error-msg">{{errorMsgs.lastName}}</span>
+            <div class="input-border">
+              <span class="error-msg">{{errorMsgs.lastName}}</span>
+            </div>
             <button class="edit-btn" {{action 'updateName'}}>Save</button>
             <button type="button" class="cancel-btn" {{action 'cancelName'}}>Cancel</button>
           </div>
@@ -31,8 +33,9 @@
           <div class="form-group">
             <label class="form-label">Email</label>
             {{input type="email" value=email class="form-input" id="email"}}
-            <div class="input-border"></div>
-            <span class="error-msg">{{errorMsgs.email}}</span>
+            <div class="input-border">
+              <span class="error-msg">{{errorMsgs.email}}</span>
+            </div>
             <button class="edit-btn" {{action 'updateEmail'}}>Save</button>
             <button type="button" class="cancel-btn" {{action 'cancelEmail'}}>Cancel</button>
           </div>
@@ -47,16 +50,19 @@
           <div class="form-group">
             <label class="form-label">Enter Current Password</label>
             {{input type="password" value=currentPassword class="form-input" id="password"}}
-            <div class="input-border"></div>
-            <span class="error-msg">{{errorMsgs.currentPassword}}</span>
+            <div class="input-border">
+              <span class="error-msg">{{errorMsgs.currentPassword}}</span>
+            </div>
             <label class="form-label">New Password (8 character minimum )</label>
             {{input type="password" value=newPassword class="form-input" id="newPassword"}}
-            <div class="input-border"></div>
-            <span class="error-msg">{{errorMsgs.newPassword}}</span>
+            <div class="input-border">
+              <span class="error-msg">{{errorMsgs.newPassword}}</span>
+            </div>
             <label class="form-label">Re-enter New Password</label>
             {{input type="password" value=reNewPassword class="form-input" id="reNewPassword"}}
-            <div class="input-border"></div>
-            <span class="error-msg">{{errorMsgs.reNewPassword}}</span>
+            <div class="input-border">
+              <span class="error-msg">{{errorMsgs.reNewPassword}}</span>
+            </div>
             <button class="edit-btn" {{action 'updatePassword'}}>Save</button>
             <button type="button" class="cancel-btn" {{action 'cancelPassword'}}>Cancel</button>
           </div>
