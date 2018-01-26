@@ -19,6 +19,7 @@
   font-size: 14px;
   color: #FF3636;
   display: none;
+  margin-top: 15px;
 }
 
 .settings-container .company-box {
@@ -62,6 +63,7 @@
   font-family: 'merlo_neuesemi_bold_italic';
   font-size: 14px;
   color: #000245;
+  margin-top: 25px;
 }
 
 .settings-container .form-container .cancel-btn{
@@ -123,6 +125,7 @@
 .settings-container .form-container .form-input.password {
   font-family: 'Roboto-Regular', 'Roboto';
   letter-spacing: 3px;
+  background-color: white;
 }
 
 .settings-container .form-container .form-input + .input-border{

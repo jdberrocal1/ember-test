@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .settings-container .logout-btn {
       display: block;
   }
@@ -22,4 +22,5 @@
   .settings-container .company-box-container{
     padding-right: 55px;
   }
+
 }

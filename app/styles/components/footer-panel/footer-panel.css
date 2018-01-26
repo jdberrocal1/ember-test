@@ -2,8 +2,12 @@
   background-color: #000245;;
 }
 
-.dark .text-link, .dark .footer-link, .dark .footer-content-right {
+.dark .text-link, .dark .footer-link {
   color: #FFFFFF;
+}
+
+.footer-content{
+  text-align: center;
 }
 
 .footer-content .title {
@@ -119,6 +123,10 @@
 
 .footer-bottom-container {
   margin: 50px 0;
+}
+
+.footer-bottom-container .footer-bottom-left, .footer-bottom-container .footer-bottom-right {
+  text-align: center;
 }
 
 .footer-bottom-left{

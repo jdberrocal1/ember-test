@@ -1,0 +1,26 @@
+@media only screen and (min-width: 768px) {
+  .footer-content{
+    text-align: left;
+  }
+
+  .social-buttons-container{ 
+    text-align: left;
+  }
+
+  .social-buttons-container .social_button {
+    text-align: center;
+  }
+
+  .footer-container {
+    padding-left: 8%;
+    padding-top: 50px;
+  }
+  
+  .footer-bottom-container .footer-bottom-left {
+    text-align: left;
+  }
+
+  .footer-bottom-container .footer-bottom-right {
+    text-align: right;
+  }
+}
