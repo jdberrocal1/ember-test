@@ -9,11 +9,10 @@
       <form>
           {{#if isUpdatingName}}
           <div class="form-group">
-            <label for="name" class="form-label">First Name</label>
             {{input type="text" value=firstName class="form-input" id="firstName"}}
             <div class="input-border"></div>
             <span class="error-msg">{{errorMsgs.firstName}}</span>
-            <label for="name" class="form-label">Last Name</label>
+            <label class="form-label">Last Name</label>
             {{input type="text" value=lastName class="form-input" id="lastName"}}
             <div class="input-border"></div>
             <span class="error-msg">{{errorMsgs.lastName}}</span>
@@ -22,14 +21,14 @@
           </div>
           {{else}}
             <div class="form-group">
-              <label for="name" lass="form-label">Name</label>
+              <label class="form-label">Name</label>
               <label class="form-value">{{fullName}}</label>
               <button class="edit-btn" {{action 'showNameForm'}}>Edit</button>
             </div>
           {{/if}}
           {{#if isUpdatingEmail}}
           <div class="form-group">
-            <label for="name" class="form-label">Email</label>
+            <label class="form-label">Email</label>
             {{input type="email" value=email class="form-input" id="email"}}
             <div class="input-border"></div>
             <span class="error-msg">{{errorMsgs.email}}</span>
@@ -38,27 +37,35 @@
           </div>
           {{else}}
             <div class="form-group">
-              <label for="name" lass="form-label">Email</label>
+              <label class="form-label">Email</label>
               <label class="form-value">{{email}}</label>
               <button class="edit-btn" {{action 'showEmailForm'}}>Edit</button>
             </div>
           {{/if}}
-          {{!-- {{#if isUpdatingPassword}}
+          {{#if isUpdatingPassword}}
           <div class="form-group">
-            <label for="name" class="form-label">Email</label>
-            {{input type="email" value=email class="form-input" id="email"}}
+            <label class="form-label">Enter Current Password</label>
+            {{input type="password" value=currentPassword class="form-input" id="password"}}
             <div class="input-border"></div>
-            <span class="error-msg">{{errorMsgs.email}}</span>
-            <button class="edit-btn" {{action 'updateEmail'}}>Save</button>
-            <button type="button" class="cancel-btn" {{action 'cancelEmail'}}>Cancel</button>
+            <span class="error-msg">{{errorMsgs.currentPassword}}</span>
+            <label class="form-label">New Password (8 character minimum )</label>
+            {{input type="password" value=newPassword class="form-input" id="newPassword"}}
+            <div class="input-border"></div>
+            <span class="error-msg">{{errorMsgs.newPassword}}</span>
+            <label class="form-label">Re-enter New Password</label>
+            {{input type="password" value=reNewPassword class="form-input" id="reNewPassword"}}
+            <div class="input-border"></div>
+            <span class="error-msg">{{errorMsgs.reNewPassword}}</span>
+            <button class="edit-btn" {{action 'updatePassword'}}>Save</button>
+            <button type="button" class="cancel-btn" {{action 'cancelPassword'}}>Cancel</button>
           </div>
           {{else}}
             <div class="form-group">
-              <label for="name" lass="form-label">Email</label>
-              <label class="form-value">{{email}}</label>
-              <button class="edit-btn" {{action 'showEmailForm'}}>Edit</button>
+              <label class="form-label">Password</label>
+              {{input type="password" value=password class="form-input password" id="passwordDisabled" disabled="disabled"}}
+              <button class="edit-btn" {{action 'showPasswordForm'}}>Edit</button>
             </div>
-          {{/if}} --}}
+          {{/if}}
       </form>
     </div>
     <div class="col-xs-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-pull-6">

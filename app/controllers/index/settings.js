@@ -5,7 +5,7 @@ export default Controller.extend({
   firstName: 'Daniel',
   lastName: 'Berrocal',
   email: 'jdanielb1992@gmail.com',
-  password: '',
+  password: 'testingPassword',
   valueBackup: {},
   isUpdatingName: false,
   isUpdatingEmail: false,
@@ -61,12 +61,12 @@ export default Controller.extend({
       this.set('errorMsgs.email', '');
       this.set('isUpdatingEmail', false);
     },
-    // showPasswordForm() {
-    //   this.set('isUpdatingEmail', true);
-    //   let valueBackup = this.get('valueBackup');
-    //   valueBackup.email = this.get('email');
-    //   this.set('valueBackup', valueBackup);
-    // },
+    showPasswordForm() {
+      this.set('isUpdatingPassword', true);
+      let valueBackup = this.get('valueBackup');
+      valueBackup.password = this.get('password');
+      this.set('valueBackup', valueBackup);
+    },
     // updatePassword() {
     //   let email = this.get('email');
     //   let emailValidationResult = Validator.fieldValidator(true, email);
@@ -75,11 +75,11 @@ export default Controller.extend({
     //     this.set('isUpdatingEmail', false);
     //   }
     // },
-    // cancelPassword() {
-    //   let valueBackup = this.get('valueBackup');
-    //   this.set('password', valueBackup.password);
-    //   // clean error msgs from passwords
-    //   this.set('isUpdatingPassword', false);
-    // },
+    cancelPassword() {
+      let valueBackup = this.get('valueBackup');
+      this.set('password', valueBackup.password);
+      // clean error msgs from passwords
+      this.set('isUpdatingPassword', false);
+    },
   }
 });
