@@ -7,6 +7,10 @@
   background-color: #E4E8EF;
 }
 
+.reports-container .company-info-container {
+  padding-bottom: 50px
+}
+
 .reports-container .powered-logo {
   height: 30px;
   margin-top: 30px;
@@ -14,12 +18,12 @@
   display: inline-block;
 }
 
-.powered-area {
+.reports-container .powered-area {
   height: 80px;
   margin-top: 30px;
 }
 
-.powered-text {
+.reports-container .powered-text {
   height: 30px;
   font-size: 18pt;
   font-family: merlo_neueitalic;
@@ -27,6 +31,120 @@
   color: #000245;
 }
 
-.powered-highlighted {
+.reports-container .powered-highlighted {
   font-family: merlo_neuebold_italic;
+}
+
+.reports-container .font-main-strong {
+  color: #000245;
+}
+
+.reports-container .label-title {
+  color: #FF3636;
+}
+
+.reports-container .label-value {
+  font-size: 20pt;
+  font-family: merlo_neueregular;
+  color: #000245;
+}
+
+.reports-container .company-name {
+  font-family: kaleidossmooth;
+  font-size: 30pt;
+  color: #000245;
+}
+
+.reports-container .info-label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14pt;
+  font-family: merlo_neuebold_italic;
+  margin-top: 30px;
+}
+
+.reports-container .arrow-container {
+  background-color: #FF3636;
+  width: 40px;
+  height: 40px;
+  font-size: 20pt;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: inline-table;
+  text-align: center;
+  vertical-align: middle; 
+}
+
+.reports-container .arrow-red:hover {
+  background-color: #FF5050;
+}
+
+.reports-container .tax-container {
+  width: 170px;
+  height: 170px;
+  font-size: 20pt;
+  color: #FFFFFF;
+  background-color: #000245;
+
+  border-radius: 50%;
+  text-align: left;
+  padding: 60px 0 0 20px;
+}
+
+.reports-container .tax-container .tax-id {
+  text-transform: uppercase;
+  font-size: 14pt;
+  font-family: merlo_neuebold_italic;
+  color: #FF3636;
+}
+
+.reports-container .tax-container .tax-hash {
+  font-family: merlo_neueregular;
+  font-size: 16pt;
+}
+
+.reports-container .tax-container .tax-number {
+  font-family: merlo_neuesemi_bold;
+}
+
+.reports-container .report-updates-container {
+  width: 250px;
+  height: 250px;
+  font-size: 20pt;
+  color: #FFFFFF;
+  background-color: #FF3636;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+  
+.reports-container .counter-marker {
+  width: 230px;
+  position: relative;
+  top: -222px;
+} 
+
+.reports-container .counter-update {
+  font-size: 10pt;
+  font-family: merlo_neuebold_italic;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 75px;
+  padding-top: 50px;
+}
+
+.reports-container .counter-update-number {
+  font-size: 75pt;
+  font-family: kaleidossmooth;
+  color: #FFFFFF;
+  display: block;
+  margin-top: -25px;
+  margin-bottom: -35px;
+}
+
+.reports-container .counter-update-days {
+  font-size: 22pt;
+  font-family: merlo_neuesemi_bold_italic;
+  color: #ffffff;
+  margin-bottom: 15px;
 }
