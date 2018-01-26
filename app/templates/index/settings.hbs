@@ -9,6 +9,7 @@
       <form>
           {{#if isUpdatingName}}
           <div class="form-group">
+            <label class="form-label">First Name</label>
             {{input type="text" value=firstName class="form-input" id="firstName"}}
             <div class="input-border"></div>
             <span class="error-msg">{{errorMsgs.firstName}}</span>
