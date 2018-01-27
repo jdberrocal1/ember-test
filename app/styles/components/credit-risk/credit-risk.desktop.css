@@ -1,0 +1,16 @@
+@media only screen and (min-width: 1200px) {
+  .credit-risk-container .title{
+    padding-left: 15px;
+  }
+
+  .credit-risk-container .scores-label {
+    width: 100%;
+  }
+
+  .credit-risk-container .risk-img{
+    width: 225px;
+    height: 225px;
+    top: -230px;
+    margin-bottom: -185px;
+  }
+}

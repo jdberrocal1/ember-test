@@ -1,0 +1,124 @@
+.credit-risk-container{
+  background-color: #000245;
+  color: #FFFFFF;
+}
+
+.credit-risk-container .title{
+  margin-top: 50px;
+  font-family: merlo_neuesemi_bold_italic;
+  font-size: 36pt;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.credit-risk-container .risk-level-container{
+  margin-top: 50px;
+}
+
+.credit-risk-container .risk-level{
+  font-size: 75pt;
+  font-family: kaleidossmooth;
+  display: block;
+}
+
+.credit-risk-container .risk-level-label{
+  color: #0F9A45;
+  font-family: 'merlo_neuesemi_bold_italic';
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 16pt;
+  line-height: 20px;
+  display: block;
+}
+
+.credit-risk-container .risk-img{
+  width: 180px;
+  height: 180px;
+  position: relative;
+  top: -215px;
+  left: 5px;
+  margin-bottom: -140px;
+}
+
+.credit-risk-container .scores-label{
+  font-family: 'merlo_neuebold_italic';
+  font-size: 14pt;
+  width: 50%;
+}
+
+.credit-risk-container .factors-label{
+  margin-top: 30px;
+  font-size: 14pt;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: merlo_neuebold_italic;
+  color: #FF3636;
+}
+
+.credit-risk-container .factor-icon {
+  color: #FF3636;
+  font-size: 20pt;
+  padding-left: 0;
+}
+
+.credit-risk-container .factor-icon i{
+  margin-top: 5px;
+}
+
+.credit-risk-container .factor-label {
+  font-family: merlo_neueregular;
+  font-size: 20pt;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+
+.credit-risk-container .show-info-button{
+  background-color: #000245;
+  border: 1px solid rgba(255, 54, 54, 1);
+  padding: 5px 15px 4px 15px;
+  margin: 30px 0;
+  display: inline-block;
+  border-radius: 50px;
+  height: 30px;
+}
+
+.credit-risk-container .show-info-button:hover{
+  padding-top: 4px;
+  padding-left: 14px;
+  border-width: 2px;
+}
+
+.credit-risk-container .show-info-button .icon {
+  color: rgba(255, 54, 54, 1);
+}
+
+.credit-risk-container .show-info-button .button-label {
+  font-size: 12pt;
+  font-family: merlo_neuesemi_bold_italic;
+  display: inline;
+}
+
+.credit-risk-container .calculations-details-container{
+ display: inline-block;
+ margin-bottom: 50px;
+}
+
+.credit-risk-container .calculations-details-separator {
+  border-top: 1px solid rgba(255, 54, 54, 1);
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.credit-risk-container .calculations-details-container .icon{
+  font-size: 20pt;
+  float: left;
+  padding-right: 15px;
+}
+
+.credit-risk-container .calculations-details-container .calculations-label {
+  font-size: 18px;
+  font-family: merlo_neueregular;
+  display: inline;
+}

@@ -22,3 +22,25 @@ You will need the following things properly installed on your computer.
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
+
+# Summary
+
+## Work Done
+* Responsive Views: Mobile and Desktop, devices used for develop:
+  * Macbook Pro 13 inch (1280w x 800h)
+  * Nexus 6 (412w x 732h)
+* Reports view and Settings view.
+* Desktop and mobile menu.
+* Settings form.
+* Form validations.
+* Footer color change between Report and Settings.
+
+## TODOs
+- Show form messages after save.
+- Toggle (double click) on risk score.
+- Show icons on password form.
+- Tablet Responsive view.
+
+## Responsive Breakpoints
+- SmartPhone: 412w x 700h
+- Desktop: >= 1200w x 900h

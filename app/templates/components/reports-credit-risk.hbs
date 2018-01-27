@@ -1,0 +1,60 @@
+<div class="row credit-risk-container">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-4">
+    <div class="title">Experian Credit Risk Score</div>
+  </div>
+</div>
+<div class="row credit-risk-container">
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 display-center risk-level-container">
+    <label class="risk-level">84</label>
+    <label class="risk-level-label">Low</label>
+    <label class="risk-level-label">Risk</label>
+    <img class="risk-img" src="/assets/img/credit-risk.png" />
+    <div class="display-center">
+      <label class="scores-label">HIGHER SCORES ARE BETTER</label>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <label class="factors-label">FACTORS LOWERING THIS SCORE</label>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="list-unstyled">
+            {{#each factors as |factor|}}
+            <li>
+              <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1 factor-icon">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+              <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 no-padding">
+                <label class="factor-label">{{factor}}</label>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+
+        {{#if showCalculations}}
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 calculations-details-separator">
+          <div class="calculations-details-container" {{action 'toggleCalculationsContainer'}}>
+            <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1 factor-icon">
+              <i class="fa fa-info-circle icon" aria-hidden="true"></i>
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 no-padding">
+              <label class="calculations-label">This score uses tradeline and collections information, public filings, and other variables to predict the risk
+                of serious credit delinquencies within the next 12 months.</label>
+            </div>
+          </div>
+        </div>
+        {{else}}
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 display-center">
+          <div class="show-info-button" {{action 'toggleCalculationsContainer'}}>
+            <i class="fa fa-info-circle icon" aria-hidden="true"></i>
+            <div class="button-label">How is this score calculated?</div>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

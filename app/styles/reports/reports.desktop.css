@@ -6,6 +6,11 @@
 
   .reports-container .counter-marker {
     width: 280px;
-}
+  }
+
+  .reports-container .powered-logo {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
 }
