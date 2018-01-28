@@ -34,6 +34,9 @@ You will need the following things properly installed on your computer.
 * Settings form.
 * Form validations.
 * Footer color change between Report and Settings.
+* Login View
+* Login/Logout actions
+* Routes validations
 
 ## TODOs
 - Show form messages after save.

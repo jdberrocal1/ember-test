@@ -47,7 +47,7 @@
   display: block;
 }
 
-.settings-container .form-container .edit-btn{
+.form-container .edit-btn{
   width: 60px;
   height: 30px;
   background: white;
@@ -60,7 +60,7 @@
   margin-top: 25px;
 }
 
-.settings-container .form-container .cancel-btn{
+.form-container .cancel-btn{
   font-family: 'merlo_neuemedium_italic';
   font-size: 14px;
   color: #FF3636;
@@ -68,7 +68,7 @@
   border: 0;
 }
 
-.settings-container .form-container .error-msg{
+.form-container .error-msg{
   font-family: 'merlo_neuemedium_italic';
   font-size: 12px;
   color: #FF3636;
@@ -77,11 +77,11 @@
   padding-top: 10px;
 }
 
-.settings-container .form-container .edit-btn:hover{
+.form-container .edit-btn:hover{
   border-width: 2px;
 }
 
-.settings-container .form-container .form-label {
+.form-container .form-label {
   font-family: 'merlo_neuemedium';
   font-weight: normal;
   font-style: normal;
@@ -91,7 +91,7 @@
   display: block;
 }
 
-.settings-container .form-container .form-value {
+.form-container .form-value {
   font-family: 'merlo_neuemedium';
   font-weight: 400;
   font-style: normal;
@@ -102,7 +102,7 @@
   display: block;
 }
 
-.settings-container .form-container .form-input {
+.form-container .form-input {
   width: 100%;
   height: 40px;
   font-family: 'merlo_neuemedium';
@@ -116,13 +116,13 @@
   outline-style: none;
 }
 
-.settings-container .form-container .form-input.password {
+.form-container .form-input.password {
   font-family: 'Roboto-Regular', 'Roboto';
   letter-spacing: 3px;
   background-color: white;
 }
 
-.settings-container .form-container .form-input + .input-border{
+.form-container .form-input + .input-border{
   width: 100%;
   height: 5px;
   background-color: #E4E8EF;
@@ -134,11 +134,11 @@
   margin-bottom: 30px;
 }
 
-.settings-container .form-container .form-input:focus + .input-border{
+.form-container .form-input:focus + .input-border{
   background-color: #FF3636;
 }
 
-.settings-container .form-container .form-group{
+.form-container .form-group{
   margin-bottom: 50px;
 }
 

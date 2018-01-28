@@ -7,6 +7,10 @@ export default Controller.extend({
     },
     goReports() {
       this.transitionToRoute('/');
+    },
+    logout() {
+      localStorage.setItem('ember-test-app-is-user-authenticated', false);
+      this.transitionToRoute('/auth');
     }
   }
 });

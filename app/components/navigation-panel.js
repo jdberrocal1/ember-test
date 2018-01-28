@@ -26,6 +26,7 @@ export default Component.extend({
       this.set('isMobileMenuOpen', false );
     },
     logout() {
+      this.get('logout')();
       this.set('isMobileMenuOpen', false );
     }
   }

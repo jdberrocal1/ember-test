@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('settings');
     this.route('reports', {path: '/'});
   });
+  this.route('auth');
 });
 
 export default Router;

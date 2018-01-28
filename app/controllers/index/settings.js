@@ -103,5 +103,9 @@ export default Controller.extend({
       this.cleanPasswordFields();
       this.set('isUpdatingPassword', false);
     },
+    logout() {
+      localStorage.setItem('ember-test-app-is-user-authenticated', false);
+      this.transitionToRoute('/auth');
+    }
   }
 });

@@ -6,9 +6,9 @@ export default Route.extend({
       let isAuthenticated = localStorage.getItem('ember-test-app-is-user-authenticated');
       isAuthenticated = isAuthenticated === 'true';
       if (isAuthenticated && transition.targetName.match('auth')) {
+        this.transitionTo('/');
+      } else if(!isAuthenticated && !transition.targetName.match('auth') && this.get('routeName').match('auth')) {
         transition.abort();
-      } else if(!isAuthenticated && !transition.targetName.match('auth')) {
-        this.transitionTo('/auth');
       } else {
         return true;
       }

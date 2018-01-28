@@ -1,0 +1,47 @@
+.login-container .box {
+  border-radius: 4px;
+  max-width: 350px;
+  margin: auto;
+  padding: 25px;
+}
+
+.login-container .title-container h4{
+  font-size: 30pt;
+  color: #000245;
+  font-family: merlo_neuesemi_bold_italic;
+}
+
+.login-container .title-container img{
+  width: 40%;
+  margin: 25px 0;
+}
+
+.login-container .form-container {
+  margin-top: 20px;
+}
+
+.login-container label {
+  text-transform: uppercase;
+}
+
+.login-container .button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-container .login-button{
+  width: 150px;
+  height: 35px;
+  background: white;
+  border: 1px solid #FF3636;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-family: 'merlo_neuesemi_bold_italic';
+  font-size: 13pt;
+  color: #000245;
+}
+
+.login-container .login-button:hover{
+  border-width: 2px;
+}
+  
