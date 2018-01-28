@@ -1,7 +1,10 @@
 # ember-test
+This application was made using the ember-cli app generator
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
+
+[Live Demo](https://ember-test-xyz-daniel-berrocal.herokuapp.com) Credentials: admin/admin
 
 ## Prerequisites
 
