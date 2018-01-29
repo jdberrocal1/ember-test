@@ -5,7 +5,7 @@ export default Controller.extend({
   actions: {
     login() {
       let credentials = this.getProperties('username', 'password');
-      if (credentials.username === 'admin' && credentials.password === 'admin') {
+      if (credentials.username.toLowerCase() === 'admin' && credentials.password.toLowerCase() === 'admin') {
         localStorage.setItem('ember-test-app-is-user-authenticated', true);
         this.transitionToRoute('/');
         this.set('username', '');

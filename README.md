@@ -28,6 +28,11 @@ You will need the following things properly installed on your computer.
 
 # Summary
 
+## TODOs
+- Show form messages after save.
+- Toggle (double click) on risk score.
+- Show icons on password form.
+- Tablet Responsive view.
 ## Work Done
 * Responsive Views: Mobile and Desktop, devices used for develop:
   * Macbook Pro 13 inch (1280w x 800h)
@@ -41,12 +46,3 @@ You will need the following things properly installed on your computer.
 * Login/Logout actions
 * Routes validations
 
-## TODOs
-- Show form messages after save.
-- Toggle (double click) on risk score.
-- Show icons on password form.
-- Tablet Responsive view.
-
-## Responsive Breakpoints
-- SmartPhone: 412w x 700h
-- Desktop: >= 1200w x 900h

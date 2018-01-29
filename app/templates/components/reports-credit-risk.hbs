@@ -36,7 +36,7 @@
 
         {{#if showCalculations}}
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 calculations-details-separator">
-          <div class="calculations-details-container" {{action 'toggleCalculationsContainer'}}>
+          <div class="calculations-details-container pointer" {{action 'toggleCalculationsContainer'}}>
             <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1 factor-icon">
               <i class="fa fa-info-circle icon" aria-hidden="true"></i>
             </div>
@@ -48,7 +48,7 @@
         </div>
         {{else}}
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 display-center">
-          <div class="show-info-button" {{action 'toggleCalculationsContainer'}}>
+          <div class="show-info-button pointer" {{action 'toggleCalculationsContainer'}}>
             <i class="fa fa-info-circle icon" aria-hidden="true"></i>
             <div class="button-label">How is this score calculated?</div>
           </div>

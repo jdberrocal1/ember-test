@@ -4,25 +4,25 @@
       <img class="logo" alt="Brand" src="/assets/img/xyz-logo.png">
     </a>
     <div class="navbar-item pull-right">
-      <div class="menu" {{action 'openMobileMenu'}}>
+      <div class="menu pointer" {{action 'openMobileMenu'}}>
         <i class="fa fa-bars hamburger" aria-hidden="true"></i>
         <ul>
-          <li><a href="#" class="menu-option" class={{if isReportsOpen "option-active" ""}} {{action 'goReports'}}>Report</a></li>
-          <li><a href="#" class="menu-option" class={{if isSettingsOpen "option-active" ""}} {{action 'goSettings'}}>Settings</a></li>
+          <li><a href="#" class="menu-option pointer" class={{if isReportsOpen "option-active" ""}} {{action 'goReports'}}>Report</a></li>
+          <li><a href="#" class="menu-option pointer" class={{if isSettingsOpen "option-active" ""}} {{action 'goSettings'}}>Settings</a></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="mobile-menu-container" class={{if isMobileMenuOpen "mobile-menu-container-open" ""}}>
     <div class="mobile-menu-close-container">
-      <div class="mobile-menu-close-area-item" {{action "closeMobileMenu"}}>
+      <div class="mobile-menu-close-area-item pointer" {{action "closeMobileMenu"}}>
         <i class="fa fa-times" aria-hidden="true"></i>
       </div>
     </div>
     <div class="mobile-menu-options-container">
       <ul class="mobile-menu-option-list">
-        <li><a class="mobile-menu-option" class={{if isReportsOpen "option-active" ""}} {{action 'goReports'}}>Reports</a></li>
-        <li><a class="mobile-menu-option" class={{if isSettingsOpen "option-active" ""}} {{action 'goSettings'}}>Settings</a></li>
+        <li><a class="mobile-menu-option pointer" class={{if isReportsOpen "option-active" ""}} {{action 'goReports'}}>Reports</a></li>
+        <li><a class="mobile-menu-option pointer" class={{if isSettingsOpen "option-active" ""}} {{action 'goSettings'}}>Settings</a></li>
       </ul>
     </div>
     <div class="mobile-menu-logout-container">
